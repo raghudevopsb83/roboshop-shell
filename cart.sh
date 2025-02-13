@@ -1,3 +1,6 @@
+component=cart
+source common.sh
+
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
 
@@ -16,8 +19,6 @@ unzip /tmp/cart.zip
 cd /app
 npm install
 
-systemctl daemon-reload
-systemctl enable cart
-systemctl restart cart
+systemd_setup
 
 
