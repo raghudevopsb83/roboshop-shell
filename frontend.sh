@@ -1,12 +1,4 @@
-print_head() {
-  echo -e "\e[36m$*\e[0m"
-  echo "#################################################" &>> $log_file
-  echo -e "\e[36m$*\e[0m" &>> $log_file
-  echo "#################################################" &>> $log_file
-}
-
-log_file=/tmp/roboshop.log
-rm -f $log_file
+source common.sh
 
 print_head Disable Default Nginx
 dnf module disable nginx -y &>> $log_file
