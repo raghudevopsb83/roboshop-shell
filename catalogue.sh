@@ -13,6 +13,6 @@ dnf install mongodb-mongosh -y &>>$log_file
 exit_status_print $?
 
 print_head Load Master Data
-mongosh --host mongo-dev.rdevopsb83.online </app/db/master-data.js &>>$log_file
+mongosh --host mongodb-dev.rdevopsb83.online </app/db/master-data.js &>>$log_file
 exit_status_print $?
 
